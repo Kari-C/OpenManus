@@ -5,6 +5,19 @@
             "source.organizeImports": "always"
         }
     },
+    "terminal.integrated.profiles.windows": {
+        "CondaTerminal": {
+            "path": [
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [
+                "/K",
+                "C:\\Users\\KC-JJ\\anaconda3\\Scripts\\activate.bat",
+                "open_manus"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "CondaTerminal",
     "[toml]": {
         "editor.defaultFormatter": "tamasfe.even-better-toml",
     },
