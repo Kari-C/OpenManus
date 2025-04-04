@@ -7,15 +7,14 @@
     },
     "terminal.integrated.profiles.windows": {
         "CondaTerminal": {
-            "path": [
-                "${env:windir}\\System32\\cmd.exe"
-            ],
-            "args": [
-                "/K",
-                "C:\\Users\\KC-JJ\\anaconda3\\Scripts\\activate.bat",
-                "open_manus"
-            ]
-        }
+        "path": "${env:windir}\\System32\\cmd.exe",
+        "args": [
+            "/K",
+            // Store aliases directly in the terminal && doskey command
+            "C:\\Users\\KC-JJ\\anaconda3\\Scripts\\activate.bat open_manus && doskey ls=dir $* && doskey dsa=FOR /f "tokens=*" %i IN ('docker ps -q') DO docker stop %i && doskey pm=python main.py && doskey ns=npm start -i $*"
+        ],
+        "icon": "terminal-cmd"
+    }
     },
     "terminal.integrated.defaultProfile.windows": "CondaTerminal",
     "[toml]": {
