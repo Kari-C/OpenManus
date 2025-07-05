@@ -137,7 +137,7 @@ const App: React.FC = () => {
       message.includes('\n') ||  // Any multi-line output
       /\d{4}-\d{2}-\d{2}/.test(message) || // Contains dates in YYYY-MM-DD format
       message.includes('|') || // Potential table format
-      message.includes(',') && message.split(',').length > 3; // Potential CSV data
+      (message.includes(',') && message.split(',').length > 3); // Potential CSV data
 
     if (isDataOutput) {
       return (
